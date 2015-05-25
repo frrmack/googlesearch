@@ -110,9 +110,9 @@ another proxy. No logging at all if False.
 
 **Methods**
 
-GoogleSearch.**top_results()**
+* GoogleSearch.**top_results()**
 
-* Returns a list of results for a google search.
+  * Returns a list of results for a google search.
 Google API determines how many results are returned, current
 default is 4.   
 A result is a dictionary (json) with the following fields:   
@@ -125,29 +125,29 @@ url
 visibleUrl   
 
 
-GoogleSearch.**top_result()**
+* GoogleSearch.**top_result()**
 
-* Returns only the top result, the best match.
+  * Returns only the top result, the best match.
 This is the equivalent of "I feel lucky"
 See GoogleSearch.**top_results()** for the keys
 in the result dictionary
 
 
-GoogleSearch.**top_urls()**
+* GoogleSearch.**top_urls()**
 
-* Returns a list of urls for a google search.
+  * Returns a list of urls for a google search.
 Google API determines how many urls are returned, current
 default is 4.
 
 
-GoogleSearch.**top_url()**
+* GoogleSearch.**top_url()**
 
-* Returns the url of the top hit.
+  * Returns the url of the top hit.
 
 
-GoogleSearch.**count()**
+* GoogleSearch.**count()**
 
-* Returns the total number of matches to the query.
+  * Returns the total number of matches to the query.
 
 
 ## Requirements
