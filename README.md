@@ -107,12 +107,13 @@ def x_vs_y_count_match(x, y):
 	nx = GoogleSearch(x).count()
 	ny = GoogleSearch(y).count()
 	print '%s vs %s:' % (x,y)
+	report = '%s wins with %i vs %i'
 	if   nx > ny:
-	    print '%s wins with %i vs %i' % (x,nx,ny)
+	    print report % (x,nx,ny)
 	elif nx < ny:
-            print '%s wins with %i vs %i' % (y,ny,nx)
+	    print report % (y,ny,nx)
 	else:
-            print "it's a tie with %s each!" % nx
+	    print "it's a tie with %s each!" % nx
 	return nx, ny
 
 counts = x_vs_y_count_match("color", "colour")
