@@ -21,14 +21,54 @@ for url in gs.top_urls():
 Print a list of top hits for a query. 
 Like a miniature first page of hits on Google.
 
-```python
-from googlesearch import GoogleSearch
-from pprint import pprint
+```
+>>> from googlesearch import GoogleSearch
+>>> from pprint import pprint
+>>> gs = GoogleSearch("Bacon")
+>>> for hit in gs.top_results():
+...     pprint(hit)
+...     print
+...
+{u'GsearchResultClass': u'GwebSearch',
+ u'cacheUrl':
+ u'http://www.google.com/search?q=cache:JkI9aWzUvbgJ:en.wikipedia.org',
+  u'content': u'<b>Bacon</b> is a meat product prepared from a pig and usually cured. It is first cured \nusing large quantities of salt, either in a brine or in a dry packing; the result is
+  \nfresh\xa0...',
+  u'title': u'<b>Bacon</b> - Wikipedia, the free encyclopedia',
+  u'titleNoFormatting': u'Bacon - Wikipedia, the free encyclopedia',
+  u'unescapedUrl': u'http://en.wikipedia.org/wiki/Bacon',
+  u'url': u'http://en.wikipedia.org/wiki/Bacon',
+  u'visibleUrl': u'en.wikipedia.org'}
 
-gs = GoogleSearch("Bacon")
-for hit in gs.top_results():
-    pprint(hit)
-    print
+{u'GsearchResultClass': u'GwebSearch',
+ u'cacheUrl':
+ u'http://www.google.com/search?q=cache:_cHIoqEzleAJ:en.wikipedia.org',
+ u'content': u'Francis <b>Bacon</b>, 1st Viscount St. Alban, QC (/\u02c8be\u026ak\u0259n/; 22 January 1561 \u2013 9 April \n1626), was an English philosopher, statesman, scientist, jurist, orator,
+ essayist\xa0...',
+ u'title': u'Francis <b>Bacon</b> - Wikipedia, the free encyclopedia',
+ u'titleNoFormatting': u'Francis Bacon - Wikipedia, the free encyclopedia',
+ u'unescapedUrl': u'http://en.wikipedia.org/wiki/Francis_Bacon',
+ u'url': u'http://en.wikipedia.org/wiki/Francis_Bacon',
+ u'visibleUrl': u'en.wikipedia.org'}
+
+{u'GsearchResultClass': u'GwebSearch',
+ u'cacheUrl':
+ u'http://www.google.com/search?q=cache:uKyfbazYgokJ:baconaustin.com',
+ u'content': u'<b>Bacon</b>. <b>Bacon</b>; 900 W 10th St; Austin, Texas 78703. Hours: Monday - Friday: \n11am - 9pm; Saturday: 9am - 9pm; Sunday: 9am - 3pm. View Larger Map\xa0...',
+ u'title': u'<b>Bacon</b>',
+ u'titleNoFormatting': u'Bacon',
+ u'unescapedUrl': u'http://baconaustin.com/',
+ u'url': u'http://baconaustin.com/',
+ u'visibleUrl': u'baconaustin.com'}
+
+{u'GsearchResultClass': u'GwebSearch',
+ u'cacheUrl': u'http://www.google.com/search?q=cache:oxQ3rEMOdAwJ:www.foodnetwork.com',
+ u'content': u'Make <b>bacon</b> the star ingredient in pastas, salads, snacks and more from Food \nNetwork Magazine.',
+ u'title': u'50 Things to Make With <b>Bacon</b> : Recipes and Cooking : Food Network',
+ u'titleNoFormatting': u'50 Things to Make With Bacon : Recipes and Cooking : Food Network',
+ u'unescapedUrl': u'http://www.foodnetwork.com/recipes/articles/50-things-to-make-with-bacon.html',
+ u'url': u'http://www.foodnetwork.com/recipes/articles/50-things-to-make-with-bacon.html',
+ u'visibleUrl': u'www.foodnetwork.com'}
 ```
 -----------------	
 
