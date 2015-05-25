@@ -1,70 +1,58 @@
 
-GoogleSearch
-============
-Search the web with python
+# GoogleSearch
+####Search the web with python
 
 `GoogleSearch` is a Python 2 library for searching the web, using
 Google's Custom Search JSON/Atom API. `GoogleSearch` provides a simple
 python API for this task, as a wrapper around Google's.
 
 
-.. code-block:: python
+```python
+from googlesearch import GoogleSearch
 
-    from googlesearch import GoogleSearch
-
-    gs = GoogleSearch("An intriguing query")
-    for url in gs.top_urls():
-        print url
-
+gs = GoogleSearch("An intriguing query")
+for url in gs.top_urls():
+    print url
+```
 
 
-Installation
-------------
-::
-
-    $ pip install -U googlesearch
-
-Examples
---------
+##Examples
 
 Print a list of top hits for a query. 
 Like a miniature first page of hits on Google.
 
-.. code-block:: python
+```python
+from googlesearch import GoogleSearch
+from pprint import pprint
 
-    from googlesearch import GoogleSearch
-    from pprint import pprint
-
-    gs = GoogleSearch("Bacon")
-    for hit in gs.top_results():
-        pprint(hit)
-        print
-
+gs = GoogleSearch("Bacon")
+for hit in gs.top_results():
+    pprint(hit)
+    print
+```
 -----------------	
 
 Query Wikipedia and show the top hit.
 
-.. code-block:: python
+```python
+from googlesearch import GoogleSearch
 
-    from googlesearch import GoogleSearch
-
-    def search_wikipedia(query):
-        gs = GoogleSearch("wikipedia.com: %s" % query)
+def search_wikipedia(query):
+    gs = GoogleSearch("wikipedia.com: %s" % query)
 	print gs.top_result()['titleNoFormatting']
 	print gs.top_url()
 	return gs.top_url()
 
-    wiki_url = search_wikipedia("Porcupine")
-
+wiki_url = search_wikipedia("Porcupine")
+```
 -----------------	
 
 Which of the two words is used more on the Internet?
 
-.. code-block:: python
+```python
+from googlesearch import GoogleSearch
 
-    from googlesearch import GoogleSearch
-
-    def x_vs_y_count_match(x, y):
+def x_vs_y_count_match(x, y):
 	nx = GoogleSearch(x).count()
 	ny = GoogleSearch(y).count()
 	print '%s vs %s:' % (x,y)
@@ -76,31 +64,29 @@ Which of the two words is used more on the Internet?
             print "it's a tie with %s each!" % nx
 	return nx, ny
 
-    counts = x_vs_y_count_match("color", "colour")
-	
+counts = x_vs_y_count_match("color", "colour")
+```	
 -----------------	
 
 Retrieve the imdb id for a movie using only its name
 (and year if there are remakes)
 
-.. code-block:: python
-
-    from googlesearch import GoogleSearch
-    import re
+```python
+from googlesearch import GoogleSearch
+import re
     
-    def imdb_id_for_movie(movie_name):
+def imdb_id_for_movie(movie_name):
 	query = 'imdb.com: %s' % movie_name
 	url = GoogleSearch( query ).top_url()
 	imdb_id = re.search('/tt[0-9]+/', url).group(0).strip('/')
 	print 'The imdb id for %s is %s' % (movie_name, imdb_id)
 	return imdb_id
 
-    tr_id = imdb_id_for_movie("Total Recall 1990")
-
+TotRecall_id = imdb_id_for_movie("Total Recall 1990")
+```
 -----------------	
     
-Documentation
--------------
+## Documentation
 
 *class* googlesearch.**GoogleSearch**(query, use_proxy=True, verbose=True)
 A Google search object for a specific query.
@@ -157,14 +143,12 @@ GoogleSearch.**count()**
 Returns the total number of matches to the query.
 
 
-Requirements
-------------
+## Requirements
 
 - Python >= 2.6
 - requests
 
-License
--------
+## License
 
-MIT licensed. See the bundled `LICENSE <https://github.com/frrmack/Goog/blob/master/LICENSE>`_ file for more details.
+MIT licensed. See the bundled [LICENSE](https://github.com/frrmack/googlesearch/blob/master/LICENSE) file for more details.
 
