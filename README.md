@@ -85,12 +85,17 @@ Query Wikipedia and show the top hit.
 from googlesearch import GoogleSearch
 
 def search_wikipedia(query):
-    gs = GoogleSearch("wikipedia.com: %s" % query)
+    gs = GoogleSearch("site:wikipedia.com %s" % query)
 	print gs.top_result()['titleNoFormatting']
 	print gs.top_url()
 	return gs.top_url()
 
 wiki_url = search_wikipedia("Porcupine")
+```
+*Output*:
+```
+Porcupine - Wikipedia, the free encyclopedia
+http://en.wikipedia.org/wiki/Porcupine
 ```
 -----------------	
 
@@ -112,7 +117,12 @@ def x_vs_y_count_match(x, y):
 	return nx, ny
 
 counts = x_vs_y_count_match("color", "colour")
-```	
+```
+*Output*:
+```
+color vs colour:
+color wins with 259000000 vs 55500000
+```
 -----------------	
 
 Retrieve the imdb id for a movie using only its name
@@ -123,13 +133,17 @@ from googlesearch import GoogleSearch
 import re
     
 def imdb_id_for_movie(movie_name):
-	query = 'imdb.com: %s' % movie_name
+	query = 'site:imdb.com %s' % movie_name
 	url = GoogleSearch( query ).top_url()
 	imdb_id = re.search('/tt[0-9]+/', url).group(0).strip('/')
 	print 'The imdb id for %s is %s' % (movie_name, imdb_id)
 	return imdb_id
 
 TotRecall_id = imdb_id_for_movie("Total Recall 1990")
+```
+*Output*:
+```
+The imdb id for Total Recall 1990 is tt0100802
 ```
 -----------------	
     

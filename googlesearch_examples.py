@@ -14,7 +14,7 @@ def print_top_results(query):
 
 def search_wikipedia(query):
     """Query Wikipedia and show the top hit"""
-    gs = GoogleSearch("wikipedia.com: %s" % query)
+    gs = GoogleSearch("site:wikipedia.com %s" % query)
     print gs.top_result()['titleNoFormatting']
     print gs.top_url()
     return gs.top_url()
@@ -38,7 +38,7 @@ def x_vs_y_count_match(x, y):
 def imdb_id_for_movie(movie_name):
     """Retrieve the imdb id for a movie 
     from the name (and year if there are remakes)"""
-    query = 'imdb.com: %s' % movie_name
+    query = 'site:imdb.com %s' % movie_name
     url = GoogleSearch( query ).top_url()
     import re
     imdb_id = re.search('/tt[0-9]+/', url).group(0).strip('/')
