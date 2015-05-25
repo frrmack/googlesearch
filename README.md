@@ -175,7 +175,7 @@ another proxy. No logging at all if False.
   * Returns a list of results for a google search.
 Google API determines how many results are returned, current
 default is 4.   
-A result is a dictionary (json) with the following fields:   
+A result is a dictionary with the following fields:   
 cacheUrl   
 content   
 title   
