@@ -112,16 +112,15 @@ GoogleSearch.**top_results()**
 
 * Returns a list of results for a google search.
 Google API determines how many results are returned, current
-default is 4.
-
-* A result is a dictionary (json) with the following fields:
-cacheUrl
-content
-title
-titleNoFormatting
-unescapedUrl
-url
-visibleUrl
+default is 4.   
+A result is a dictionary (json) with the following fields:   
+cacheUrl   
+content   
+title   
+titleNoFormatting   
+unescapedUrl   
+url   
+visibleUrl   
 
 
 GoogleSearch.**top_result()**
