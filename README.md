@@ -29,6 +29,8 @@ Like a miniature first page of hits on Google.
 ...     pprint(hit)
 ...     print
 ...
+```
+```
 {u'GsearchResultClass': u'GwebSearch',
  u'cacheUrl':
  u'http://www.google.com/search?q=cache:JkI9aWzUvbgJ:en.wikipedia.org',
