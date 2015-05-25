@@ -28,7 +28,7 @@ Examples
 --------
 
 Print a list of top hits for a query. 
-Like a mini returned first page on Google
+Like a miniature first page of hits on Google.
 
 .. code-block:: python
 
@@ -40,8 +40,9 @@ Like a mini returned first page on Google
         pprint(hit)
         print
 
+-----------------	
 
-Query Wikipedia and show the top hit
+Query Wikipedia and show the top hit.
 
 .. code-block:: python
 
@@ -55,6 +56,7 @@ Query Wikipedia and show the top hit
 
     wiki_url = search_wikipedia("Porcupine")
 
+-----------------	
 
 Which of the two words is used more on the Internet?
 
@@ -74,8 +76,9 @@ Which of the two words is used more on the Internet?
             print "it's a tie with %s each!" % nx
 	return nx, ny
 
-    x_vs_y_count_match("color", "colour")
+    counts = x_vs_y_count_match("color", "colour")
 	
+-----------------	
 
 Retrieve the imdb id for a movie using only its name
 (and year if there are remakes)
@@ -92,21 +95,33 @@ Retrieve the imdb id for a movie using only its name
 	print 'The imdb id for %s is %s' % (movie_name, imdb_id)
 	return imdb_id
 
-    imdb_id_for_movie("Total Recall 1990")
+    tr_id = imdb_id_for_movie("Total Recall 1990")
 
+-----------------	
     
 Documentation
 -------------
 
-class `googlesearch.GoogleSearch(query, use_proxy=True, verbose=True)`
+*class* googlesearch.**GoogleSearch**(query, use_proxy=True, verbose=True)
 A Google search object for a specific query.
 
-Parameters:
-`query`: str
+**Parameters**:
+**query**: str
+The search query for this search
+
+**use_proxy**: bool
+If True, GoogleSearch will use the proxies defined in the
+PROXIES_LIST variable of googlesearch_settings.py to do the
+searches. If a proxy starts getting HTTP 403 FORBIDDEN responses,
+it will switch to the next proxy in the list. It will raise a
+GoogleAPIError only if all proxies get 403 responses. 
+
+**verbose**: bool
+If True, GoogleSearch will report to sys.stderr when it switches to
+another proxy. No logging at all if False.
 
 
-
-`GoogleSearch.top_results()`
+GoogleSearch.**top_results()**
 Returns a list of results for a google search.
 Google API determines how many results are returned, current
 default is 4.
@@ -121,24 +136,24 @@ url
 visibleUrl
 
 
-`GoogleSearch.top_result()`
+GoogleSearch.**top_result()**
 Returns only the top result, the best match.
 This is the equivalent of "I feel lucky"
-See `GoogleSearch.top_results()` for the keys
+See GoogleSearch.**top_results()** for the keys
 in the result dictionary
 
 
-`GoogleSearch.top_urls()`
+GoogleSearch.**top_urls()**
 Returns a list of urls for a google search.
 Google API determines how many urls are returned, current
 default is 4.
 
 
-`GoogleSearch.top_url()`
+GoogleSearch.**top_url()**
 Returns the url of the top hit.
 
 
-`GoogleSearch.count()`
+GoogleSearch.**count()**
 Returns the total number of matches to the query.
 
 
