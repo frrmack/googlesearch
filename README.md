@@ -13,11 +13,12 @@ python API for this task, as a wrapper around Google's.
 >>> for url in gs.top_urls():
 ...    print url
 ...
-http://www.torontosun.com/2015/02/08/cbcs-ascension-an-intriguing-sci-fi-drama
-http://www.agentquery.com/writer_hq.aspx
-http://www.girlfridayproductions.com/2015/02/how-to-write-a-great-query-letter/
-http://nelsonagency.com/2015/04/special-treat-rhiannon-thomass-original-query-letter-for-a-wcked-thing/
 ```
+`http://www.torontosun.com/2015/02/08/cbcs-ascension-an-intriguing-sci-fi-drama`
+`http://www.agentquery.com/writer_hq.aspx`
+`http://www.girlfridayproductions.com/2015/02/how-to-write-a-great-query-letter/`
+`http://nelsonagency.com/2015/04/special-treat-rhiannon-thomass-original-query-letter-for-a-wcked-thing/`
+
 
 
 ##Examples
