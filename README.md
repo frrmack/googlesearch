@@ -21,7 +21,7 @@ for url in gs.top_urls():
 Print a list of top hits for a query. 
 Like a miniature first page of hits on Google.
 
-```
+```python
 >>> from googlesearch import GoogleSearch
 >>> from pprint import pprint
 >>> gs = GoogleSearch("Bacon")
