@@ -3,7 +3,7 @@
 from googlesearch import GoogleSearch
 
 def print_top_results(query):
-    """ Print a list of top hits fora query. 
+    """ Print a list of top hits for a query. 
     Like a mini returned first page on Google"""
     from pprint import pprint
     gs = GoogleSearch(query)
@@ -23,8 +23,8 @@ def search_wikipedia(query):
 def x_vs_y_count_match(x, y):
     """ Which of two words is used 
     more on the Internet?"""
-    nx = int(GoogleSearch(x).count())
-    ny = int(GoogleSearch(y).count())
+    nx = GoogleSearch(x).count()
+    ny = GoogleSearch(y).count()
     print '%s vs %s:' % (x,y)
     if   nx > ny:
         print '%s wins with %i vs %i' % (x,nx,ny)

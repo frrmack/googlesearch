@@ -89,10 +89,6 @@ class GoogleSearch(object):
 
                 return results
         
-    def count(self):
-        "Number of results"
-        return self.result_data['cursor']['estimatedResultCount']
-
     def top_result(self):
         """ First hit (what "I'm feeling lucky" would return)"""
         return self.result_data['results'][0]
@@ -109,6 +105,11 @@ class GoogleSearch(object):
         """ URLs of the top hits """
         get_url = lambda result: result['unescapedUrl']
         return map(get_url, self.top_results())
+
+    def count(self):
+        "Number of results"
+        return int(self.result_data['cursor']['estimatedResultCount'])
+
 
 
 # Apply the tests/examples
