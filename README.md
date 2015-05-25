@@ -8,11 +8,15 @@ python API for this task, as a wrapper around Google's.
 
 
 ```python
-from googlesearch import GoogleSearch
-
-gs = GoogleSearch("An intriguing query")
-for url in gs.top_urls():
-    print url
+>>> from googlesearch import GoogleSearch
+>>> gs = GoogleSearch("An intriguing query")
+>>> for url in gs.top_urls():
+...    print url
+...
+http://www.torontosun.com/2015/02/08/cbcs-ascension-an-intriguing-sci-fi-drama
+http://www.agentquery.com/writer_hq.aspx
+http://www.girlfridayproductions.com/2015/02/how-to-write-a-great-query-letter/
+http://nelsonagency.com/2015/04/special-treat-rhiannon-thomass-original-query-letter-for-a-wcked-thing/
 ```
 
 
@@ -22,20 +26,20 @@ Print a list of top hits for a query.
 Like a miniature first page of hits on Google.
 
 ```python
->>> from googlesearch import GoogleSearch
->>> from pprint import pprint
->>> gs = GoogleSearch("Bacon")
->>> for hit in gs.top_results():
-...     pprint(hit)
-...     print
-...
+from googlesearch import GoogleSearch
+from pprint import pprint
+
+gs = GoogleSearch("Bacon")
+for hit in gs.top_results():
+    pprint(hit)
+    print
 ```
+*Output*:
 ```
 {u'GsearchResultClass': u'GwebSearch',
  u'cacheUrl':
  u'http://www.google.com/search?q=cache:JkI9aWzUvbgJ:en.wikipedia.org',
-  u'content': u'<b>Bacon</b> is a meat product prepared from a pig and usually cured. It is first cured \nusing large quantities of salt, either in a brine or in a dry packing; the result is
-  \nfresh\xa0...',
+  u'content': u'<b>Bacon</b> is a meat product prepared from a pig and usually cured. It is first cured \nusing large quantities of salt, either in a brine or in a dry packing; the result is \nfresh\xa0...',
   u'title': u'<b>Bacon</b> - Wikipedia, the free encyclopedia',
   u'titleNoFormatting': u'Bacon - Wikipedia, the free encyclopedia',
   u'unescapedUrl': u'http://en.wikipedia.org/wiki/Bacon',
@@ -45,8 +49,7 @@ Like a miniature first page of hits on Google.
 {u'GsearchResultClass': u'GwebSearch',
  u'cacheUrl':
  u'http://www.google.com/search?q=cache:_cHIoqEzleAJ:en.wikipedia.org',
- u'content': u'Francis <b>Bacon</b>, 1st Viscount St. Alban, QC (/\u02c8be\u026ak\u0259n/; 22 January 1561 \u2013 9 April \n1626), was an English philosopher, statesman, scientist, jurist, orator,
- essayist\xa0...',
+ u'content': u'Francis <b>Bacon</b>, 1st Viscount St. Alban, QC (/\u02c8be\u026ak\u0259n/; 22 January 1561 \u2013 9 April \n1626), was an English philosopher, statesman, scientist, jurist, orator, essayist\xa0...',
  u'title': u'Francis <b>Bacon</b> - Wikipedia, the free encyclopedia',
  u'titleNoFormatting': u'Francis Bacon - Wikipedia, the free encyclopedia',
  u'unescapedUrl': u'http://en.wikipedia.org/wiki/Francis_Bacon',
