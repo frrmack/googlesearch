@@ -1,6 +1,5 @@
-
 # GoogleSearch
-####Search the web with python
+#####Search the web with python
 
 GoogleSearch is a Python 2 library for searching the web, using
 Google's Custom Search JSON/Atom API. It provides a simple
@@ -41,12 +40,12 @@ for hit in gs.top_results():
 {u'GsearchResultClass': u'GwebSearch',
  u'cacheUrl':
  u'http://www.google.com/search?q=cache:JkI9aWzUvbgJ:en.wikipedia.org',
-  u'content': u'<b>Bacon</b> is a meat product prepared from a pig and usually cured. It is first cured \nusing large quantities of salt, either in a brine or in a dry packing; the result is \nfresh\xa0...',
-  u'title': u'<b>Bacon</b> - Wikipedia, the free encyclopedia',
-  u'titleNoFormatting': u'Bacon - Wikipedia, the free encyclopedia',
-  u'unescapedUrl': u'http://en.wikipedia.org/wiki/Bacon',
-  u'url': u'http://en.wikipedia.org/wiki/Bacon',
-  u'visibleUrl': u'en.wikipedia.org'}
+ u'content': u'<b>Bacon</b> is a meat product prepared from a pig and usually cured. It is first cured \nusing large quantities of salt, either in a brine or in a dry packing; the result is \nfresh\xa0...',
+ u'title': u'<b>Bacon</b> - Wikipedia, the free encyclopedia',
+ u'titleNoFormatting': u'Bacon - Wikipedia, the free encyclopedia',
+ u'unescapedUrl': u'http://en.wikipedia.org/wiki/Bacon',
+ u'url': u'http://en.wikipedia.org/wiki/Bacon',
+ u'visibleUrl': u'en.wikipedia.org'}
 
 {u'GsearchResultClass': u'GwebSearch',
  u'cacheUrl':
