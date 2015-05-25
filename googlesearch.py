@@ -26,7 +26,7 @@ class GoogleAPIError(Exception):
 
 class GoogleSearch(object):
     
-    api_url = 'http://ajax.googleapis.com/ajax/services/search/web?v=1.0&%s'
+    api_url_template = settings.GOOGLE_API_URL_TEMPLATE
     proxy_no = 0
 
     def __init__(self, query, use_proxy=True, verbose=True):
@@ -57,7 +57,7 @@ class GoogleSearch(object):
     @property
     def result_data(self):
         if self._result_data is None:
-            query_url = self.api_url % self._ajax_query
+            query_url = self.api_url_template % self._ajax_query
             self._result_data = self.hit_the_search_api(query_url)
         return self._result_data
     
