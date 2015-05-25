@@ -2,8 +2,8 @@
 # GoogleSearch
 ####Search the web with python
 
-`GoogleSearch` is a Python 2 library for searching the web, using
-Google's Custom Search JSON/Atom API. `GoogleSearch` provides a simple
+GoogleSearch is a Python 2 library for searching the web, using
+Google's Custom Search JSON/Atom API. It provides a simple
 python API for this task, as a wrapper around Google's.
 
 
@@ -89,13 +89,17 @@ TotRecall_id = imdb_id_for_movie("Total Recall 1990")
 ## Documentation
 
 *class* googlesearch.**GoogleSearch**(query, use_proxy=True, verbose=True)
+
 A Google search object for a specific query.
 
 **Parameters**:
+
 **query**: str
+
 The search query for this search
 
 **use_proxy**: bool
+
 If True, GoogleSearch will use the proxies defined in the
 PROXIES_LIST variable of googlesearch_settings.py to do the
 searches. If a proxy starts getting HTTP 403 FORBIDDEN responses,
@@ -103,11 +107,13 @@ it will switch to the next proxy in the list. It will raise a
 GoogleAPIError only if all proxies get 403 responses. 
 
 **verbose**: bool
+
 If True, GoogleSearch will report to sys.stderr when it switches to
 another proxy. No logging at all if False.
 
 
 GoogleSearch.**top_results()**
+
 Returns a list of results for a google search.
 Google API determines how many results are returned, current
 default is 4.
@@ -123,6 +129,7 @@ visibleUrl
 
 
 GoogleSearch.**top_result()**
+
 Returns only the top result, the best match.
 This is the equivalent of "I feel lucky"
 See GoogleSearch.**top_results()** for the keys
@@ -130,16 +137,19 @@ in the result dictionary
 
 
 GoogleSearch.**top_urls()**
+
 Returns a list of urls for a google search.
 Google API determines how many urls are returned, current
 default is 4.
 
 
 GoogleSearch.**top_url()**
+
 Returns the url of the top hit.
 
 
 GoogleSearch.**count()**
+
 Returns the total number of matches to the query.
 
 
