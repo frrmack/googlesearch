@@ -1,11 +1,11 @@
 
-GoogleSearch: Search the web with python
-========================================
-Python Wrapper around the Google Search API
+GoogleSearch
+============
+Search the web with python
 
 `GoogleSearch` is a Python 2 library for searching the web, using
 Google's Custom Search JSON/Atom API. `GoogleSearch` provides a simple
-python API for this task.
+python API for this task, as a wrapper around Google's.
 
 
 .. code-block:: python
