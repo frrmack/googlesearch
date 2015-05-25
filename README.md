@@ -189,8 +189,8 @@ visibleUrl
 
   * Returns only the top result, the best match.
 This is the equivalent of "I feel lucky"
-See GoogleSearch.**top_results()** for the keys
-in the result dictionary
+See GoogleSearch.top_results() for the keys
+in the result dictionary.
 
 
 * GoogleSearch.**top_urls()**
