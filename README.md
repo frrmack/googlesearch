@@ -92,21 +92,23 @@ TotRecall_id = imdb_id_for_movie("Total Recall 1990")
 
 * A Google search object for a specific query.
 
-* **Parameters**:   
+* **Parameters**
+
   * **query**: str   
   The search query for this search
 
-  * **use_proxy**: bool   
+  * **use_proxy**: bool, default: True   
   If True, GoogleSearch will use the proxies defined in the
 PROXIES_LIST variable of googlesearch_settings.py to do the
 searches. If a proxy starts getting HTTP 403 FORBIDDEN responses,
 it will switch to the next proxy in the list. It will raise a
 GoogleAPIError only if all proxies get 403 responses. 
 
-  * **verbose**: bool   
+  * **verbose**: bool, default: True   
   If True, GoogleSearch will report to sys.stderr when it switches to
 another proxy. No logging at all if False.
 
+**Methods**
 
 GoogleSearch.**top_results()**
 
