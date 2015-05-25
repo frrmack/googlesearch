@@ -29,7 +29,9 @@ Examples
 
 Print a list of top hits for a query. 
 Like a mini returned first page on Google
+
 .. code-block:: python
+
     from googlesearch import GoogleSearch
     from pprint import pprint
 
@@ -40,7 +42,9 @@ Like a mini returned first page on Google
 
 
 Query Wikipedia and show the top hit
+
 .. code-block:: python
+
     from googlesearch import GoogleSearch
 
     def search_wikipedia(query):
@@ -53,7 +57,9 @@ Query Wikipedia and show the top hit
 
 
 Which of the two words is used more on the Internet?
+
 .. code-block:: python
+
     from googlesearch import GoogleSearch
 
     def x_vs_y_count_match(x, y):
@@ -73,7 +79,9 @@ Which of the two words is used more on the Internet?
 
 Retrieve the imdb id for a movie using only its name
 (and year if there are remakes)
+
 .. code-block:: python
+
     from googlesearch import GoogleSearch
     import re
     
@@ -86,6 +94,7 @@ Retrieve the imdb id for a movie using only its name
 
     imdb_id_for_movie("Total Recall 1990")
 
+    
 Documentation
 -------------
 
