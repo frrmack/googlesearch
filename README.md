@@ -24,7 +24,7 @@ http://nelsonagency.com/2015/04/special-treat-rhiannon-thomass-original-query-le
 
 Get the repository and run
 ```
-python setup.py
+python setup.py install
 ```
 in it. That's it.
 
