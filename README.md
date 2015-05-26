@@ -22,11 +22,9 @@ http://nelsonagency.com/2015/04/special-treat-rhiannon-thomass-original-query-le
 
 ##Installation
 
-Get the repository and run
 ```
-python setup.py install
+pip install -U googlesearch
 ```
-in it. That's it.
 
 ##Examples
 
