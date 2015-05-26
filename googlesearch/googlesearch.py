@@ -16,7 +16,7 @@ url
 visibleUrl
 
 """
-import googlesearch_settings as settings
+import googlesearch.settings as settings
 import sys
 import json
 import urllib, requests
@@ -115,7 +115,7 @@ class GoogleSearch(object):
 # Apply the tests/examples
 if __name__ == '__main__':
 
-    import googlesearch_examples as examples
-    examples.showcase_all_examples()
+    import googlesearch.examples
+    googlesearch.examples.showcase_all_examples()
 
 
