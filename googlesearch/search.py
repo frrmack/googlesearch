@@ -111,10 +111,3 @@ class GoogleSearch(object):
 
 
 
-# Apply the tests/examples
-if __name__ == '__main__':
-
-    import googlesearch.examples
-    googlesearch.examples.showcase_all_examples()
-
-
