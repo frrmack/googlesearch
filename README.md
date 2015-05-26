@@ -20,6 +20,13 @@ http://www.girlfridayproductions.com/2015/02/how-to-write-a-great-query-letter/
 http://nelsonagency.com/2015/04/special-treat-rhiannon-thomass-original-query-letter-for-a-wcked-thing/
 ```
 
+##Installation
+
+Get the repository and run
+```
+python setup.py
+```
+in it. That's it.
 
 ##Examples
 
