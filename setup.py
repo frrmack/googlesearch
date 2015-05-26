@@ -12,7 +12,7 @@ def find_version(filename):
     version = ''
     with open(filename, 'r') as f:
         regex = re.compile(r'__version__ = [\'"]([^\'"]*)[\'"]')
-        for line in fp:
+        for line in f:
             match = regex.match(line)
             if match:
                 version = match.group(1)
@@ -21,7 +21,7 @@ def find_version(filename):
         raise RuntimeError('Cannot find version information')
     return version
 
-__version__ = find_version("textblob/__init__.py")
+__version__ = find_version("googlesearch/__init__.py")
 
 
 setup(  name='googlesearch',
