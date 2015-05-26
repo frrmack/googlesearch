@@ -162,7 +162,7 @@ The imdb id for Total Recall 1990 is tt0100802
 
   * **use_proxy**: bool, default: True   
   If True, GoogleSearch will use the proxies defined in the
-PROXIES_LIST variable of googlesearch_settings.py to do the
+PROXIES_LIST variable defined in the googlesearch.settings module to do the
 searches. If a proxy starts getting HTTP 403 FORBIDDEN responses,
 it will switch to the next proxy in the list. It will raise a
 GoogleAPIError only if all proxies get 403 responses. 
