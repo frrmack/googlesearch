@@ -18,6 +18,7 @@ visibleUrl
 """
 import googlesearch.settings as settings
 from googlesearch.exceptions import GoogleAPIError
+
 import sys
 import json
 import urllib, requests

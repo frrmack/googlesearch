@@ -6,9 +6,13 @@ __author__ = 'Irmak Sirer'
 
 PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-from .googlesearch import GoogleSearch
+from .search import GoogleSearch
 
 __all__ = [
-        'GoogleSearch',
-    ]
+    'settings',
+    'exceptions',
+    'GoogleSearch',
+]
+
+
 
