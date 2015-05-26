@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 import re
 
 REQUIREMENTS = ['requests']
@@ -33,7 +33,7 @@ setup(  name='googlesearch',
         author='Irmak Sirer',
         author_email='irmak.sirer@gmail.com',
         url='https://github.com/frrmack/googlesearch',
-        packages=find_packages(exclude=('examples', )),
+        packages=[ 'googlesearch', ],
         zip_safe=False,
         classifiers=[ 'Development Status :: 4 - Beta',
                       'Intended Audience :: Developers',
