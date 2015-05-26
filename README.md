@@ -30,7 +30,7 @@ in it. That's it.
 
 ##Examples
 
-Print a list of top hits for a query. 
+*Print a list of top hits for a query.* 
 Like a miniature first page of hits on Google.
 
 ```python
@@ -85,7 +85,7 @@ for hit in gs.top_results():
 ```
 -----------------	
 
-Query Wikipedia and show the top hit.
+*Query Wikipedia and show the top hit.*
 
 ```python
 from googlesearch import GoogleSearch
@@ -105,7 +105,7 @@ http://en.wikipedia.org/wiki/Porcupine
 ```
 -----------------	
 
-Which of the two words is used more on the Internet?
+*Which of the two words is used more on the Internet?*
 
 ```python
 from googlesearch import GoogleSearch
@@ -132,8 +132,8 @@ color wins with 259000000 vs 55500000
 ```
 -----------------	
 
-Retrieve the imdb id for a movie using only its name
-(and year if there are remakes)
+*Retrieve the imdb id for a movie using only its name
+(and year if there are remakes).*
 
 ```python
 from googlesearch import GoogleSearch
