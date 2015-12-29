@@ -28,9 +28,14 @@ class GoogleSearch(object):
     api_url_template = settings.GOOGLE_API_URL_TEMPLATE
     proxy_no = 0
 
-    def __init__(self, query, use_proxy=True, verbose=True):
+    def __init__(self, query, use_proxy=True, verbose=True, hl=None):
         self.query = query
-        self._ajax_query = urllib.urlencode({'q': self.query})
+
+        query_dict = {'q': self.query}
+        if hl is not None:
+            query_dict['hl'] = hl
+
+        self._ajax_query = urllib.urlencode(query_dict)
         self._result_data = None
         self.use_proxy = use_proxy
         self.verbose = verbose
