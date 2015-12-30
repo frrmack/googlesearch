@@ -1,5 +1,6 @@
 from examples.top_results import print_top_results
 from examples.top_results_in_spanish import print_top_results_in_spanish
+from examples.get_n_results import get_n_results
 from examples.search_wikipedia import search_wikipedia
 from examples.count_match import x_vs_y_count_match
 from examples.imdb_id import imdb_id_for_movie
@@ -32,6 +33,12 @@ def showcase_all_examples():
 
     print separator
     
+
+    ##### EXAMPLE 10: Top 12 results for Bacon #####
+    get_n_results("Bacon", 12)
+
+    print separator
+
 
 if __name__ == '__main__':
 

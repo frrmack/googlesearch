@@ -23,6 +23,8 @@ import sys
 import json
 import urllib, requests
 
+from math import ceil
+
 class GoogleSearch(object):
     
     api_url_template = settings.GOOGLE_API_URL_TEMPLATE
@@ -31,11 +33,14 @@ class GoogleSearch(object):
     def __init__(self, query, use_proxy=True, verbose=True, hl=None):
         self.query = query
 
-        query_dict = {'q': self.query}
+        self.query_dict = {
+            'q': self.query,
+            'rsz': 8
+        }
         if hl is not None:
-            query_dict['hl'] = hl
+            self.query_dict['hl'] = hl
 
-        self._ajax_query = urllib.urlencode(query_dict)
+        self._ajax_query = urllib.urlencode(self.query_dict)
         self._result_data = None
         self.use_proxy = use_proxy
         self.verbose = verbose
@@ -68,7 +73,7 @@ class GoogleSearch(object):
     def hit_the_search_api(self, query_url):
             tried_proxies = 0
             while True:
-                search_response = requests.get(query_url, proxies=self.proxy)
+                search_response = requests.get(query_url, proxies=self.proxy, timeout=5)
                 try:
                     response_dict = json.loads(search_response.text)
                     results = response_dict['responseData']
@@ -114,5 +119,18 @@ class GoogleSearch(object):
         "Number of results"
         return int(self.result_data['cursor']['estimatedResultCount'])
 
+    def get_results(self, n):
+        """Gets up to n results"""
+        query_dict = self.query_dict
+        n_queries = int(ceil(n / 8.0))
+        results = []
 
+        for q in range(n_queries):
+            query_dict['start'] = q
+            ajax_query = urllib.urlencode(query_dict)
+            query_url = self.api_url_template % ajax_query
+            r = self.hit_the_search_api(query_url)
+            results += r['results']
+
+        return results[:n]
 
