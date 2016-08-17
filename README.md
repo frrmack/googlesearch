@@ -1,8 +1,10 @@
 # GoogleSearch
 
 -------
-### Important Note
+
+#### Important Note
 As of August 2016, the free Google API that this library used is no longer available. As a result, googlesearch is no longer in PyPI.
+
 -------
 
 #####Search the web with python
