@@ -166,7 +166,7 @@ The imdb id for Total Recall 1990 is tt0100802
 * **Parameters**
 
   * **query**: str   
-  The search query for this search
+  The search query for this search.
 
   * **use_proxy**: bool, default: True   
   If True, GoogleSearch will use the proxies defined in the
@@ -178,6 +178,10 @@ GoogleAPIError only if all proxies get 403 responses.
   * **verbose**: bool, default: True   
   If True, GoogleSearch will report to sys.stderr when it switches to
 another proxy. No logging at all if False.
+
+  * **hl**: str, default: None   
+  If setted, the hl parameter is added to the query, returning search results 
+for the specified language. For example set hl='es' to get results in spanish.
 
 **Methods**
 
