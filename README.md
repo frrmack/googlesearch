@@ -3,7 +3,7 @@
 -------
 
 #### Important Note
-As of August 2016, the free Google API that this library used is no longer available. As a result, googlesearch is no longer in PyPI.
+As of August 2016, the free Google API that this library used is no longer available. As a result, googlesearch is no longer in PyPI. See [here](https://github.com/frrmack/googlesearch/issues/7#issuecomment-243898904) for more information.
 
 -------
 
